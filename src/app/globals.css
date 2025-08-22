@@ -1,26 +1,105 @@
 @import "tailwindcss";
 
 :root {
-  --background: #ffffff;
-  --foreground: #171717;
+    --color-primary: #53C9C9;
+    --color-secondary: #284975;
+    --color-accent: #FFD66B;
+
+    --color-light-1: #F4F3F3;
+    --color-light-2: #DBE3E3;
+
+    --color-dark-1: #1F1F1F;
+    --color-dark-2: #465050;
+
+    --color-error: #FF3538;
+
+    /*the app has a 15 column layout, these variables are needed, and will be calculated for tailwind*/
+    --width-app: 1440px;
+    --padding-app: 20px;
+    --gutter-app: 16px;
 }
 
 @theme inline {
-  --color-background: var(--background);
-  --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
+    --font-body: var(--font-body);
+    --font-heading: var(--font-heading);
+
+    --color-primary: var(--color-primary);
+    --color-secondary: var(--color-secondary);
+    --color-accent: var(--color-accent);
+
+    --color-light-1: var(--color-light-1);
+    --color-light-2: var(--color-light-2);
+
+    --color-dark-1: var(--color-dark-1);
+    --color-dark-2: var(--color-dark-2);
+
+    --color-error: var(--color-error);
+
+    --color-background-1: var(--color-light-1);
+    --color-background-2: var(--color-light-2);
+
+
+    --padding-app: var(--padding-app);
+    --gutter-app: var(--gutter-app);
+
+    --width-app: var(--width-app);
+
 }
 
-@media (prefers-color-scheme: dark) {
+/*@media (prefers-color-scheme: dark) {
   :root {
     --background: #0a0a0a;
     --foreground: #ededed;
   }
+}*/
+
+
+* {
+    @apply font-body;
+    box-sizing: border-box;
+    color: var(--color-dark-1);
+
+}
+h1, h2, h3, h4, h5, h6 {
+    @apply font-heading bg-red-300;
 }
 
 body {
-  background: var(--background);
-  color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+    @apply bg-background-2 m-auto w-app p-app h-screen;
+    /*@apply border border-b-dark-1 ;*/
+}
+
+.dashboard
+{
+    @apply h-full;
+    display: grid;
+    grid-template-columns: repeat(15, 1fr);
+    grid-template-rows: repeat(10, 1fr);
+    gap: var(--gutter-app);
+    grid-template-areas:
+    "lsb lsb lsb nav nav nav nav nav nav nav nav nav nav nav nav"
+    "lsb lsb lsb con con con con con con con con con rsb rsb rsb"
+    "lsb lsb lsb con con con con con con con con con rsb rsb rsb"
+    "lsb lsb lsb con con con con con con con con con rsb rsb rsb"
+    "lsb lsb lsb con con con con con con con con con rsb rsb rsb"
+    "lsb lsb lsb con con con con con con con con con rsb rsb rsb"
+    "lsb lsb lsb con con con con con con con con con rsb rsb rsb"
+    "lsb lsb lsb con con con con con con con con con rsb rsb rsb"
+    "lsb lsb lsb con con con con con con con con con rsb rsb rsb"
+    "lsb lsb lsb con con con con con con con con con rsb rsb rsb";
+
+
+}
+
+
+.lsb { grid-area: lsb; }
+
+.nav { grid-area: nav; }
+
+.rsb { grid-area: rsb; }
+
+.con { grid-area: con; }
+
+.dashboard-item {
+    @apply rounded-2xl;
 }
