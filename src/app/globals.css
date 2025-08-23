@@ -1,4 +1,5 @@
 @import "tailwindcss";
+@import "../components/DashboardSections/dashboardsections.css";
 
 :root {
     --color-primary: #53C9C9;
@@ -35,7 +36,7 @@
 
     --color-error: var(--color-error);
 
-    --color-background-1: var(--color-light-1);
+    --color-background-1: #F4F3F3;
     --color-background-2: var(--color-light-2);
 
 
@@ -43,6 +44,9 @@
     --gutter-app: var(--gutter-app);
 
     --width-app: var(--width-app);
+    --padding-large: 16px;
+    --padding-medium: 8px;
+    --radius-default: 20px;
 
 }
 
@@ -53,15 +57,17 @@
   }
 }*/
 
+/*This are the defaults*/
+@layer base{
+    * {
+        @apply font-body;
+        box-sizing: border-box;
+        color: var(--color-dark-1);
 
-* {
-    @apply font-body;
-    box-sizing: border-box;
-    color: var(--color-dark-1);
-
-}
-h1, h2, h3, h4, h5, h6 {
-    @apply font-heading bg-red-300;
+    }
+    h1, h2, h3, h4, h5, h6 {
+        @apply font-heading bg-red-300;
+    }
 }
 
 body {
@@ -100,6 +106,5 @@ body {
 
 .con { grid-area: con; }
 
-.dashboard-item {
-    @apply rounded-2xl;
-}
+
+

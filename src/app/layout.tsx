@@ -3,6 +3,7 @@ import { Inter, Raleway } from "next/font/google";
 import "./globals.css";
 import GridOverlay from "@/components/GridOverlay";
 
+
 const inter = Inter({
     variable: "--font-heading",
     subsets: ["latin"],
@@ -21,7 +22,7 @@ export default function RootLayout({children,}: Readonly<{ children: React.React
   return (
       <html lang="en" className={`${inter.variable} ${raleway.variable}`}>
         <body>{children}</body>
-        <GridOverlay show={true}></GridOverlay>
+        {/*<GridOverlay show={true}></GridOverlay>*/}
       </html>
   );
 }
