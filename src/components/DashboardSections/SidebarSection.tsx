@@ -1,6 +1,8 @@
 import "./dashboardsections.css"
 import Image from "next/image";
 import Link from "next/link";
+import Icon from "@/helpers/Icons";
+import IconType from "@/types/IconType";
 
 
 const SidebarSection = () => {
@@ -12,7 +14,8 @@ const SidebarSection = () => {
             </div>
             <div className={"border border-black mt-2 p-medium"}>
                 <Link href={"/"} className={"cursor-pointer flex items-center  bg-secondary p-large rounded-default gap-2"}>
-                    <Image src={"icons/home.svg"} alt={"icon"} width={24} height={24} />
+                    <Icon iconType={IconType.Home} colorClassName={"text-light-1"} ></Icon>
+
                     <p className={"text-light-1 text-bold"}>Home</p>
                 </Link>
             </div>
