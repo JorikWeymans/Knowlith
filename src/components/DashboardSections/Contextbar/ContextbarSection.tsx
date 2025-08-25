@@ -1,5 +1,6 @@
 import "../dashboardsections.css"
 import ProfileCard from "@/components/DashboardSections/Contextbar/ContextCards/ProfileCard";
+import WeeklyStatisticsCard from "@/components/DashboardSections/Contextbar/ContextCards/WeeklyStatisticsCard";
 
 const ContextbarSection = () => {
     return (
@@ -8,9 +9,9 @@ const ContextbarSection = () => {
 
 
             <ProfileCard />
+            <WeeklyStatisticsCard />
             <div className={"bg-red-200"}> test </div>
-            <div className={"bg-red-200"}> test </div>
-            <div className={"bg-red-200"}> test </div>
+
         </section>
     );
 };
