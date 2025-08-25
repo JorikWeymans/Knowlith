@@ -108,7 +108,7 @@ body {
 
 .nav { grid-area: nav; }
 
-.contextbar-section { grid-area: rsb; }
+.rsb { grid-area: rsb; }
 
 .con { grid-area: con; }
 

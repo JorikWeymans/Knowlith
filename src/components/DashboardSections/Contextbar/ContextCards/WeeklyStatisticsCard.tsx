@@ -32,7 +32,7 @@ const WeeklyStatisticsCard = () => {
        <ContextCard title={"Weekly statistics"}>
 
            <Image src={'/temp/images/graph.png'} alt={'graph'} width={235*20} height={148*20}
-           className={"h-[148px] w-auto"}/>
+           className={"h-[128px] w-auto"}/>
            <div className={"flex flex-col gap-1"}>
                <LegendItem position={1} title={"Intro into c#"} lessonsCompleted={52}/>
                <LegendItem position={2} title={"History of Spanish civil war"} lessonsCompleted={31}/>

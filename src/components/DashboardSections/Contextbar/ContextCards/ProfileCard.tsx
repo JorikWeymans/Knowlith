@@ -17,7 +17,7 @@ const ProfileStatItem = ({title, icon, value, iconColorClass} : ProfileStatItemP
                 <Icon iconType={icon} size={20} colorClassName={iconColorClass} />
                 <p className={"font-semibold text-base text-dark-2"}>{value}</p>
             </div>
-            <p className={"text-center font-medium text-xs text-dark-2 whitespace-pre"}>{title}</p>
+            {/*<p className={"text-center font-medium text-xs text-dark-2 whitespace-pre"}>{title}</p>*/}
         </div>
     )
 }
