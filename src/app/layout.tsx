@@ -5,12 +5,12 @@ import GridOverlay from "@/components/GridOverlay";
 
 
 const inter = Inter({
-    variable: "--font-heading",
+    variable: "--font-body",
     subsets: ["latin"],
 })
 const raleway = Raleway({
     subsets: ["latin"],
-    variable: "--font-body",
+    variable: "--font-heading",
 });
 
 export const metadata: Metadata = {

@@ -73,6 +73,7 @@
     h1, h2, h3, h4, h5, h6 {
         @apply font-heading;
     }
+
 }
 
 body {
@@ -107,7 +108,7 @@ body {
 
 .nav { grid-area: nav; }
 
-.rsb { grid-area: rsb; }
+.contextbar-section { grid-area: rsb; }
 
 .con { grid-area: con; }
 

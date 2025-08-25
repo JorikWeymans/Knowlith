@@ -1,5 +1,6 @@
 import SidebarSection from "@/components/DashboardSections/SidebarSection";
 import NavSection from "@/components/DashboardSections/NavSection";
+import ContextbarSection from "@/components/DashboardSections/Contextbar/ContextbarSection";
 
 export default function Home() {
   return (
@@ -7,7 +8,8 @@ export default function Home() {
           <SidebarSection></SidebarSection>
           <NavSection></NavSection>
           <div className={"ddashboard-section con bg-yellow-500"}>Content</div>
-          <div className={"ddashboard-section rsb bg-red-300"}>Content sidebar</div>
+
+          <ContextbarSection></ContextbarSection>
       </div>
 
   );

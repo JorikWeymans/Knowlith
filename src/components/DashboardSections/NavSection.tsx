@@ -2,6 +2,7 @@ import "./dashboardsections.css"
 import Icon from "@/helpers/Icons";
 import IconType from "@/types/IconType";
 import Image from "next/image";
+import ProfileImage from "@/helpers/ProfileImage";
 
 const NavSection = () => {
     return (
@@ -20,15 +21,7 @@ const NavSection = () => {
 
                 {/*this div so it is able to become a component later if needed*/}
                 <div className={"w-[39px] h-[39px]"}>
-                    <div
-                        className={"w-full h-full rounded-full flex items-center box-content border border-primary cursor-pointer"}>
-                        <div
-                            className={"w-full h-full rounded-full border border-secondary flex items-center overflow-hidden"}>
-                            <Image src={"/temp/images/profile_avatar.png"}
-                                   alt={"profile avatar"} width={39} height={39}
-                                   className={"w-auto h-full"}></Image>
-                        </div>
-                    </div>
+                   <ProfileImage size={39}/>
                 </div>
             </div>
 
