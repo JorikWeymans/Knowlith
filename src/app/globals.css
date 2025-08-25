@@ -13,6 +13,7 @@
     --color-dark-2: #465050;
 
     --color-error: #FF3538;
+    --color-highlight: var(--color-error);
 
     /*the app has a 15 column layout, these variables are needed, and will be calculated for tailwind*/
     --width-app: 1440px;
@@ -35,6 +36,7 @@
     --color-dark-2: var(--color-dark-2);
 
     --color-error: var(--color-error);
+    --color-highlight: var(--color-highlight);
 
     --color-background-1: #F4F3F3;
     --color-background-2: var(--color-light-2);
@@ -46,6 +48,9 @@
     --width-app: var(--width-app);
     --padding-large: 16px;
     --padding-medium: 8px;
+
+    --margin-large: var(--padding-large);
+
     --radius-default: 20px;
 
 }

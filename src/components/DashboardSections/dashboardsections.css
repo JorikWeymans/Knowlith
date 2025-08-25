@@ -1,4 +1,16 @@
 .dashboard-section {
     @apply bg-background-1 rounded-default;
-
 }
+.nav-section {
+    display: grid;
+    grid-template-columns: repeat(12, 1fr);
+    grid-template-rows: 1fr;
+    gap: 0px 16px;
+    grid-auto-flow: row;
+    grid-template-areas:
+    "a a a a a a a a a b b b";
+}
+
+.a { grid-area: a; }
+
+.b { grid-area: b; }
