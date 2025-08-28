@@ -5,10 +5,7 @@ import Image from "next/image";
 
 const CourseCard = ({course} : {course: Course}) => {
     return (
-        <div className={"flex-1/3 rounded-default overflow-hidden relative  "}>
-            <div className="absolute inset-0">
-                <Image src={"/temp/images/card_backdrop.jpg"} alt={"Background"} className={"w-full h-full  object-cover "} width={200} height={200}></Image>
-            </div>
+        <div className={"flex-1/3 rounded-default overflow-hidden relative  z-20"}>
             <div className={"bg-secondary p-medium"}>
                 <h1 className={"font-semibold px-medium text-[18px] text-center text-light-1 truncate pb-medium"}>{course.title}</h1>
                 <ProgressBar progress={course.completed}/>
@@ -18,11 +15,15 @@ const CourseCard = ({course} : {course: Course}) => {
                     <p className={"font-medium text-xs overflow-hidden whitespace-normal line-clamp-4 text-ellipsis"}>{course.description}</p>
                     <p className={"font-semibold text-xs pt-1"}> Days left:{course.daysLeft}</p>
                 </div>
-                <div className={"bg-secondary w-full p-medium text-center text-light-1 rounded-default"}>
+                <div className={"bg-secondary w-full p-medium text-center text-light-1 rounded-default cursor-pointer"}>
                     Resume
                 </div>
             </div>
+            <div className="absolute -z-10 inset-0 ">
+                <Image src={"/temp/images/card_backdrop.jpg"} alt={"Background"} className={"w-full h-full absolute object-cover opacity-45 blur-xs"} width={200} height={200}></Image>
+                <div className={"w-full h-full bg-white"}></div>
 
+            </div>
         </div>
     )
 }
