@@ -1,5 +1,6 @@
 import React from 'react';
 import Image from "next/image";
+import {UserButton} from "@clerk/nextjs";
 
 interface Props {
     size: number;
@@ -14,6 +15,7 @@ const ProfileImage = ({size, hasBigBorder = false}: Props) => {
             className={"w-full h-full rounded-full flex items-center box-border border-primary " + borderClass }>
             <div
                 className={"w-full h-full rounded-full border-secondary flex items-center overflow-hidden " + borderClass}>
+
                 <Image src={"/temp/images/profile_avatar.png"}
                        alt={"profile avatar"} width={size} height={size}
                        className={"w-auto h-full"}></Image>

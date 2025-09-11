@@ -3,6 +3,7 @@ import Icon from "@/helpers/Icons";
 import IconType from "@/types/IconType";
 import Image from "next/image";
 import ProfileImage from "@/helpers/ProfileImage";
+import {UserButton} from "@clerk/nextjs";
 
 const NavSection = () => {
     return (
@@ -20,8 +21,9 @@ const NavSection = () => {
                 </div>
 
                 {/*this div so it is able to become a component later if needed*/}
-                <div className={"w-[39px] h-[39px]"}>
-                   <ProfileImage size={39}/>
+                <div className={"w-[39px] h-[39px]  flex items-center"}>
+                    <UserButton />
+                   {/*<ProfileImage size={39}/>*/}
                 </div>
             </div>
 

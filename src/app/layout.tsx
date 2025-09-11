@@ -1,5 +1,10 @@
 import type { Metadata } from "next";
 import { Inter, Raleway } from "next/font/google";
+import {
+  ClerkProvider,
+  // SignedIn,
+  // UserButton,
+} from "@clerk/nextjs";
 import "./globals.css";
 import GridOverlay from "@/components/GridOverlay";
 
@@ -20,9 +25,18 @@ export const metadata: Metadata = {
 
 export default function RootLayout({children,}: Readonly<{ children: React.ReactNode; }>) {
   return (
+    <ClerkProvider>
       <html lang="en" className={`${inter.variable} ${raleway.variable}`}>
-        <body>{children}</body>
-        {/*<GridOverlay show={true}></GridOverlay>*/}
+        <body>
+          {/*<header>*/}
+          {/*  <SignedIn>*/}
+          {/*    <UserButton />*/}
+          {/*  </SignedIn>*/}
+          {/*</header>*/}
+          {children}
+          {/*<GridOverlay show={true}></GridOverlay>*/}
+        </body>
       </html>
+    </ClerkProvider>
   );
 }
