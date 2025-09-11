@@ -32,7 +32,7 @@ const MainContentSection = () => {
     const courseList = GetCourses();
 
     return (
-       <main className={"dashboard-section con px-medium flex gap-2 items-start"}>
+       <main className={"dashboard-section con flex gap-2 items-start justify-between"}>
            {courseList.map((course) => (<CourseCard key={course.id} course={course} />))}
            {/*<div className={"bg-green-500"}>*/}
            {/*    ok*/}
