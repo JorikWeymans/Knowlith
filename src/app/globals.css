@@ -104,7 +104,6 @@ body {
 
 }
 
-
 .lsb { grid-area: lsb; }
 
 .nav { grid-area: nav; }
@@ -114,4 +113,33 @@ body {
 .con { grid-area: con; }
 
 
+/* ----------- */
+/*    CLERK    */
+/* ----------- */
 
+.cl-formButtonPrimary {
+    @apply bg-secondary;
+    font-size: 14px;
+    text-transform: none;
+}
+
+.cl-formButtonPrimary > :first-child {
+    @apply text-light-2 ;
+}
+
+/* This is the small arrow next to Continue */
+.cl-formButtonPrimary svg path {
+    @apply text-light-1;
+}
+
+.cl-formButtonPrimary:is(:hover, :focus, :active) {
+    @apply bg-primary;
+}
+
+.cl-formButtonPrimary:is(:hover, :focus, :active) > :first-child {
+    @apply text-dark-1;
+}
+
+.cl-formButtonPrimary:is(:hover, :focus, :active)  svg path {
+    @apply text-dark-1;
+}
